@@ -2,12 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="383dp"
-    android:layout_height="530dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color"
     android:orientation="vertical"
-    android:background="@drawable/docb"
-    android:backgroundTint="#80FFFFFF"
-    android:backgroundTintMode="src_over"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -15,74 +13,149 @@
         android:layout_height="150dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="93dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="40dp"
-            android:src="@drawable/doca"
-            android:layout_marginLeft="20dp"/>
+
+
+        <!--<TextView-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:textSize="30dp"-->
+            <!--android:ellipsize="marquee"-->
+            <!--android:marqueeRepeatLimit="marquee_forever"-->
+            <!--android:scrollHorizontally="true"-->
+            <!---->
+            <!--android:background="#AAFFFFFF"-->
+            <!--android:paddingLeft="15dp"-->
+            <!--android:layout_marginTop="60dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:singleLine="true"-->
+            <!--/>-->
 
         <TextView
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:textSize="30dp"
+            android:layout_width="343dp"
+            android:layout_height="49dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/fzi"
+            android:textStyle="normal"
+            android:layout_marginLeft="10dp"
+            android:text="Diabetes predictor application"
+            android:paddingTop="5dp"
+            android:textSize="25dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
             android:ellipsize="marquee"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:scrollHorizontally="true"
             android:id="@+id/marq1"
-            android:background="#AAFFFFFF"
-            android:paddingLeft="15dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="1dp"
+            android:background="@drawable/custom_widget"
+            android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
-            android:text="Smart Health Care Kit"/>
+            android:scrollHorizontally="true"/>
+
+
+
     </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="383dp"-->
+        <!--android:layout_height="120dp">-->
+        <!--<ImageView-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:id="@+id/signimg2"-->
+            <!--android:layout_marginLeft="150dp"-->
+            <!--android:src="@drawable/doc_logo"-->
+            <!--android:layout_marginTop="30dp"/>-->
+    <!--</LinearLayout>-->
+
     <LinearLayout
         android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_width="100dp"
-                android:src="@drawable/stethescope"
-                android:layout_height="100dp" />
-            <Button
-                android:layout_width="230dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="10dp"
-                android:text="Check up"
-                android:id="@+id/chkp"
-                android:textSize="25dp"/>
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
+            android:layout_height="180dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
 
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_width="100dp"
-                android:src="@drawable/kit"
-                android:layout_height="100dp" />
-            <Button
-                android:layout_width="230dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="40dp"
-                android:text="Medication Info"
-                android:textSize="25dp"
-                android:id="@+id/mediinfo"
-                android:layout_marginLeft="10dp"/>
+            <!--<ImageView-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:src="@drawable/kit"-->
+                <!--android:layout_height="100dp" />-->
+
+
+
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:id="@+id/checklayout">
+
+
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/check"
+                    android:id="@+id/mediinfoimage"/>
+
+                <Button
+                    android:layout_below="@+id/mediinfoimage"
+                    android:id="@+id/mediinfo"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Check"
+                    android:background="@drawable/bg_color_button"
+                    android:fontFamily="@font/fg"
+                    android:textAllCaps="false"
+                    android:textSize="12dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_toLeftOf="@+id/checklayout">
+
+
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/doctor"
+                    android:id="@+id/docimage"/>
+
+                <Button
+                    android:layout_below="@+id/docimage"
+                    android:id="@+id/calldoc"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Call Doc"
+                    android:background="@drawable/bg_color_button"
+                    android:fontFamily="@font/fg"
+                    android:textAllCaps="false"
+                    android:textSize="12dp" />
+            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

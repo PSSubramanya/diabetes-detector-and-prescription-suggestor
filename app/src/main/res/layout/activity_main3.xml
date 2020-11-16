@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_color"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -16,9 +17,10 @@
             <TextView
                 android:layout_width="280dp"
                 android:layout_height="60dp"
-                android:layout_marginLeft="60dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp"
-                android:textSize="20dp"
+                android:fontFamily="@font/fg"
+                android:textSize="25dp"
                 android:id="@+id/dispview"/>
         </LinearLayout>
         <LinearLayout
@@ -30,7 +32,7 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:background="#AAFFFFFF"
+                android:fontFamily="@font/fg"
                 android:text="Sugar Level"
                 android:id="@+id/diab"
                 android:textSize="15dp"/>
@@ -38,13 +40,17 @@
                 android:layout_width="120dp"
                 android:layout_height="50dp"
                 android:hint="in (mg/dL)"
-                android:background="#AAFFFFFF"
+                android:fontFamily="@font/fg"
                 android:inputType="number"
                 android:id="@+id/sug"/>
             <Button
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:text="CHECK"
+                android:layout_marginLeft="15dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/fc"
+                android:background="@drawable/custom_txt_view"
                 android:textSize="15dp"
                 android:id="@+id/checking"/>
 
@@ -52,7 +58,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="120dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -69,8 +75,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="220dp"
                     android:layout_height="40dp"
-                    android:background="#AAFFFFFF"
-                    android:text="Before Food(in mgs.)"
+                    android:text="Fasting(in mgs.)"
+                    android:fontFamily="@font/fg"
                     android:id="@+id/cktxt1"
                     android:textSize="20dp"/>
             </LinearLayout>
@@ -85,70 +91,15 @@
                     android:layout_height="30dp" />
                 <TextView
                     android:layout_marginTop="10dp"
-                    android:layout_width="220dp"
+                    android:layout_width="240dp"
                     android:layout_height="40dp"
-                    android:background="#AAFFFFFF"
-                    android:text="After Food   (in mgs.)"
+                    android:text="Post-prandial(in mgs.)"
                     android:id="@+id/cktxt2"
+                    android:fontFamily="@font/fg"
                     android:textSize="20dp"/>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
 
-                <CheckBox
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"
-                    android:id="@+id/ck3"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp" />
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_width="220dp"
-                    android:layout_height="40dp"
-                    android:background="#AAFFFFFF"
-                    android:text="@string/Low_BP"
-                    android:id="@+id/cktxt3"
-                    android:textSize="20dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
 
-                <CheckBox
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"
-                    android:id="@+id/ck4"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp" />
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_width="320dp"
-                    android:layout_height="40dp"
-                    android:background="#AAFFFFFF"
-                    android:text="@string/Normal_BP"
-                    android:id="@+id/cktxt4"
-                    android:textSize="20dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
-
-                <CheckBox
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"
-                    android:id="@+id/ck5"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp" />
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_width="320dp"
-                    android:layout_height="40dp"
-                    android:background="#AAFFFFFF"
-                    android:text="@string/High_BP"
-                    android:id="@+id/cktxt5"
-                    android:textSize="20dp"/>
-            </LinearLayout>
         </LinearLayout>
 
         <ScrollView
@@ -157,7 +108,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:fontFamily="@font/fzi"
                 android:id="@+id/prescp"/>
 
         </ScrollView>
@@ -165,12 +118,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150dp">
+
             <Button
                 android:layout_width="120dp"
                 android:layout_height="60dp"
-                android:layout_marginLeft="230dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="135dp"
                 android:text="Order"
-                android:background="#AAFFFFFF"
+                android:background="@drawable/custom_txt_view"
+                android:textAllCaps="false"
+                android:fontFamily="@font/fc"
                 android:textSize="20dp"
                 android:onClick="order"/>
         </LinearLayout>
